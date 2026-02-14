@@ -59,14 +59,14 @@ pub fn set_and_check(device: &HidDevice, _bfr: &mut [u8], depth: u8, waiting: bo
         ));
     }
 
-    thread::sleep(Duration::from_millis(100));
+    thread::sleep(Duration::from_millis(50));
 
     if waiting {
         set_and_check(device, _bfr, depth + 1, true)
     } else {
         let mut bfr = [0u8; 55];
         device.get_feature_report(&mut bfr)?;
-        thread::sleep(Duration::from_millis(40));
+        thread::sleep(Duration::from_millis(50));
 
         match bfr[0] {
             0xA2 => {

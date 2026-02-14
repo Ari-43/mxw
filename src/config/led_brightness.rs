@@ -15,7 +15,7 @@ pub fn set(device: &HidDevice, wired: u8, wireless: Option<u8>) -> Result<()> {
 
     device.send_feature_report(&bfr)?;
 
-    thread::sleep(Duration::from_millis(30));
+    thread::sleep(Duration::from_millis(50));
 
     bfr[7] = 0x00;
     bfr[8] = wireless.unwrap_or(wired);

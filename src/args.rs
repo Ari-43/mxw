@@ -54,7 +54,7 @@ pub enum Config {
         /// Profile id (1-3)
         #[arg(
             short, long,
-            help = "[default: 1]",
+            default_value = "1",
             value_parser = value_parser!(u8).range(1..=3),
         )]
         profile: Option<u8>,
@@ -67,7 +67,7 @@ pub enum Config {
     LEDBrightness {
         wired: u8,
 
-        #[clap(help = "[default: <WIRED>]")]
+        #[clap(default_value = "0")]
         wireless: Option<u8>,
     },
 
@@ -75,7 +75,7 @@ pub enum Config {
     Sleep {
         minutes: u8,
 
-        #[clap(help = "[default: 0]")]
+        #[clap(default_value = "0")]
         seconds: Option<u8>,
     },
 
@@ -84,7 +84,7 @@ pub enum Config {
         /// Profile id (1-3)
         #[arg(
             short, long,
-            help = "[default: 1]",
+            default_value = "1",
             value_parser = value_parser!(u8).range(1..=3),
         )]
         profile: Option<u8>,
@@ -98,8 +98,8 @@ pub enum Config {
         /// Profile id (1-3)
         #[arg(
             short, long,
-            help = "[default: 1]",
-            value_parser = value_parser!(u8).range(1..=3)
+            default_value = "1",
+            value_parser = value_parser!(u8).range(1..=3),
         )]
         profile: Option<u8>,
 
@@ -117,8 +117,8 @@ pub enum Config {
         /// Profile id (1-3)
         #[arg(
             short, long,
-            help = "[default: 1]",
-            value_parser = value_parser!(u8).range(1..=3)
+            default_value = "1",
+            value_parser = value_parser!(u8).range(1..=3),
         )]
         profile: Option<u8>,
 
@@ -148,7 +148,7 @@ pub enum Config {
         /// Profile id (1-3)
         #[arg(
             short, long,
-            help = "[default: 1]",
+            default_value = "1",
             value_parser = value_parser!(u8).range(1..=3),
         )]
         profile: Option<u8>,
@@ -162,7 +162,7 @@ pub enum Config {
         /// Profile id (1-3)
         #[arg(
             short, long,
-            help = "[default: 1]",
+            default_value = "1",
             value_parser = value_parser!(u8).range(1..=3),
         )]
         profile: Option<u8>,
@@ -195,7 +195,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
@@ -206,7 +206,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
@@ -217,7 +217,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
@@ -243,7 +243,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
@@ -257,7 +257,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
@@ -268,7 +268,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
@@ -287,7 +287,7 @@ pub enum Effect {
         /// Effect rate, 0-100
         #[arg(
             short, long,
-            help = "[default: 40]",
+            default_value = "40",
             value_parser = value_parser!(u8).range(0..=100),
         )]
         rate: Option<u8>,
